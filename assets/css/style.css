@@ -1,0 +1,967 @@
+/* ADDING FONTS AND FONTS CLASSES*/
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.roboto-light{
+    font-family: "Roboto", sans-serif;
+    font-weight: 380;
+    font-style: normal;
+}
+
+.roboto-medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* ADDING VARIABLES FOR LATER USAGE , COLORS, FONTS ETC.*/
+:root{
+
+    /* adding main colors;*/
+    --white-color: #FFFFFF;
+    --black-color: #1E1E1E;
+    --light-grey-color: #87898E;
+
+}
+
+/* REFORGIN BODY TO ALWAYS USE BOROTO TEXT*/
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color:var(--black-color);
+
+    /*CHANGING PROREPTIES OF BODY FOR FURTHER UPDATE IN MEDIA */
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    letter-spacing: 2px;
+}
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+
+    /*adding our properties*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+section{
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+/* VARIABLES FOR TEXT AND OTHER TEXT USAGES*/
+.big_text{
+    font-size: 54px
+}
+
+.small_text{
+    font-size: 24px
+}
+
+.medium_text{
+    font-size: 28px
+}
+
+.smaller_text{
+    font-size: 20px
+}
+
+.biggest_text{
+    font-size:90px;
+}
+.logo_text{
+    font-size:48px;
+    padding-top: 30px;
+}
+
+.navbar_text{
+    font-size: 22px;
+    font-weight: 500;
+}
+.modular_text{
+    font-size: 18px;
+}
+.last_text{
+    font-size:36px;
+    padding: 0;
+    margin: 0;
+}
+/* OTHER CLASSES, FOR SUCH USAGES AS IMAGE AND BUTTON*/
+
+.main_image{
+    /*class for images, that will often be used in first page*/
+    width: 768px;
+    height: 576px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.modular_image{
+    /*class for images which will appeare in modular windows*/
+    width: 530px;
+    height: 400px;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* Here we have two categories of button for out site */
+/* First one is default class to set width and height for all further button*/
+button{
+    border: none;
+    outline: none;
+
+
+    /*changing parametress to thats what we need*/
+    width: 250px;
+    height: 75px;
+    background-color: var(--white-color);
+    transition: transform 0.3s ease; /* Добавляем плавный переход */
+    cursor: pointer; /* Устанавливаем курсор в виде пальца */
+}
+
+/*this class used for white button*/
+.white_button{
+    outline: 1px solid var(--black-color);
+    color: var(--black-color);
+    background-color: var(--white-color);
+
+    font-weight: 400;
+}
+
+.white_button:hover {
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+/*and other one for black button*/
+.black_button{
+    color:var(--white-color);
+    background-color: var(--black-color);
+}
+
+.black_button:hover {
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+.clear_button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-color);
+}
+
+/*configuring padding between buttons section*/
+.section_buttons{
+    display: flex;
+    gap:30px;
+    margin-top: 30px;
+}
+
+
+.modal_button{
+    width: 392px;
+}
+/*========================= STARTING WITH HEADER SECTION  =========================*/
+header{
+    margin: 0;
+    padding: 0;
+
+    /*adding height properties to heder, must be changed in media*/
+    height: 134px;
+    border-bottom: 1px solid var(--black-color);
+
+    /*adding padding left as it seen on FIGMA. And also add tag, for future #MEDIA */
+    padding-left: 64px;
+}
+
+.logo_image{
+    /*adding value to icons that will be used for logo*/
+    height: 88px;
+    width: 88px;
+}
+
+.logo_main{
+    /*adding display properties to header*/
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    gap: 250px;
+}
+
+.logo_title{
+    /*prorepties for content, at logo section*/
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+
+.logo_navbar{
+    display: flex;
+    gap:50px;
+
+}
+
+/*========================= HERO SECTION =========================*/
+.hero_section_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.hero_section{
+    display: flex;
+    margin-top: 180px;
+}
+
+.hero_section_buttons{
+    margin-top: 30px;
+    display: flex;
+    gap:30px;
+}
+
+/*========================= DRONES =========================*/
+.drone_section{
+    display: flex;
+    margin-top: 190px;
+}
+
+.drone_section-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.section_plus{
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+.section_plus_first,.section_plus-second{
+    width: 50%;
+}
+
+/*========================= ADDITIONAL COMPLECTATION SECTION =========================*/
+.add_complec{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 200px;
+}
+
+.add_complec_lightgray{
+    color: var(--light-grey-color);
+}
+
+.add_complec_box{
+    border: 2px solid var(--black-color);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    margin: 0 auto;
+    width: 60%;
+}
+
+.add_complec_line{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.add_complec_righttext{
+    text-align: right;
+}
+
+.add_complec_firstext{
+    width: 50%;
+}
+
+/*========================= REVIEWS SECTION =========================*/
+.chervon_icon{
+    width: 30px;
+    height: 30px;
+}
+.reviews_section{
+    display: flex;
+    margin-top: 130px;
+}
+
+.reviews_section_secondhalf{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.reviews_big_text{
+    width:70%;
+}
+
+/*========================= BIG BOXES SECTION =========================*/
+.big-box_section{
+    margin-top: 200px;
+}
+
+.big-box_section_allboxes{
+    margin-top:15px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.big_box_section_box{
+    width: 450px;
+    height: 290px;
+    border: 2px solid var(--black-color);
+
+    padding: 35px;
+}
+
+/*========================= SOLDIER SECTION =========================*/
+.soldier_section{
+    margin-top:220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.soldier_section_start{
+    display: flex;
+    gap:30px;
+    margin-bottom: 50px;
+}
+
+.star_icon{
+    width: 60px;
+    height: 60px;
+}
+
+.soldier_text{
+    padding: 0;
+    margin: 0;
+}
+
+.soldier_section_circle{
+    width: 150px;
+    height: 150px;
+    background-color: var(--black-color);
+    border-radius: 50%; /* Задает окружность */
+}
+.big-text_soldier{
+    text-align: center;
+    width: 80%;
+    font-size: 36px;
+}
+.soldier_section_soldier{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.soldier_section_line{
+    width: 1px;
+    height: 150px;
+    background-color: var(--black-color);
+}
+
+/*========================= ADDITIONAL INFO SECTION =========================*/
+.additional_info_box{
+    width:100%;
+    height: 380px;
+    border: 2px solid var(--black-color);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.additional_info{
+    margin-top: 220px;
+}
+
+.additional_info_text{
+    width: 50%;
+    font-size: 64px;
+}
+
+/*========================= CONTACT INFO SECTION =========================*/
+.contact_icon{
+    color: var(--black-color);
+    width: 100px;
+    height: 100px;
+}
+
+.contact_text{
+    text-decoration: underline;
+    transition: transform 0.3s ease; /* Добавляем плавный переход */
+}
+
+.contact_section{
+    margin-top: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_section_box{
+    width:20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact_text:hover{
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+/*========================= CONTACT INFO SECTION =========================*/
+.last_logo_image{
+    width: 195px;
+    height: 190px;
+}
+
+.last_section{
+    margin-top: 240px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+
+    text-align: center;
+}
+
+/*========================= FOOTER INFO SECTION =========================*/
+footer{
+    height: 80px;
+    padding-top: 30px;
+    padding-right: 64px;
+    padding-left: 64px;
+
+    border-top: 2px solid var(--black-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_copyright_text{
+    font-size: 18px;
+}
+
+.footer_navbar{
+    text-decoration: underline;
+    display: flex;
+    gap: 30px;
+}
+
+/*========================= MODAL WINDOWS =========================*/
+.modal_section{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* затемненный задний фон */
+
+}
+
+.modal_section_content {
+    background-color: var(--white-color);
+    margin: 5% auto;
+    padding: 64px;
+
+    border: 1px solid #888;
+    width: 90%;
+    height: 80vh;
+    overflow: auto;
+
+}
+
+.modal_section_characteristic_and_photo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 105px;
+    margin-top: 30px;
+}
+
+.modal_section_characteristic{
+    padding: 20px;
+    border: 2px solid var(--black-color);
+    height: fit-content;
+}
+
+.modal_section_text_halfs{
+    display: flex;
+    gap: 164px;
+}
+
+.modal_section_characteristic_half{
+    display: flex;
+    gap: 80px;
+    margin-top: 24px;
+}
+
+.modal-section_characteristic_name,.modal-section_characteristic_modal{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    gap: 24px;
+}
+
+.modal-section_characteristic_name{
+    gap:28px;
+}
+
+.modal_section_about_text{
+    margin-top: 24px;
+    display: flex;
+    gap:38px;
+}
+
+.modal_section_about_text_name{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.modal_section_about_text_info{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.modal_section_about_and_price{
+    padding: 24px;
+    margin-top: 52px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal_section_price{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.hide-scrollbar {
+    overflow: hidden;
+}
+
+/*========================= MEDIA QUARIES =========================*/
+
+@media screen and (max-width: 550px) {
+
+    section{
+        margin: 0;
+    }
+
+    .big-text_soldier{
+        font-size: 20px;
+        width: 100%;
+    }
+    .main_image{
+        width: 345px;
+        height: 265px;
+    }
+    .black_button{
+        width: 100%;
+        height: 55px;
+    }
+    .white_button{
+        width: 100%;
+        height: 55px;
+    }
+    /* ALL MAIN VARIABLES*/
+    .big_text{
+        font-size: 28px;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+    .additional_info_text{
+        font-size: 28px;
+    }
+    .biggest_text{
+        font-size: 32px;
+        letter-spacing: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .medium_text{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .small_text{
+        font-size: 14px;
+    }
+
+    .smaller_text{
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--light-grey-color);
+    }
+    /* HEADER SECTION */
+    .logo_navbar{
+        display: none;
+    }
+    header{
+        border: none;
+        margin: 0;
+        padding-left: 24px;
+    }
+    .logo_text{
+        font-size: 18px;
+    }
+    .logo_image{
+        width: 45px;
+        height: 45px;
+    }
+    /* HERO SECTION */
+    .hero_section{
+        margin:0;
+    }
+
+    .hero_button{
+        display: none;
+    }
+
+    .hero_section{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero_section_text{
+        width: 100%;
+    }
+
+    .hero_section_image{
+        margin-top: 100px;
+        position: absolute;
+        width: 260px;
+        height: 170px;
+        padding-left: 32px;
+    }
+
+    .hero_section_buttons{
+        margin-top: 230px;
+    }
+
+    /* BIG BOX SECTION */
+    .big-box_section_allboxes{
+        flex-direction: column;
+        gap: 16px;
+
+
+    }
+
+    .big-box_section{
+        margin-top: 0;
+    }
+
+    .big_box_section_box{
+        width: 345px;
+        height: 151px;
+        padding: 12px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box-medium-text{
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+    }
+
+    .box-small-text{
+        font-size: 16px
+    }
+
+    .big-box_section .smaller_text {
+        display: none;
+    }
+
+    .reviews_section .reviews_section_secondhalf .white_button{
+        display: none;
+    }
+
+    .reviews_section .reviews_section_secondhalf .clear_button{
+        display: none;
+    }
+
+    .reviews_section{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .reviews_big_text, .reviews_section_firsthalf, .reviews_section_secondhalf{
+        width: 100%;
+    }
+
+    .reviews_big_text{
+        padding: 0;
+        margin: 0;
+    }
+
+    .additional_info{
+        margin-top: 0;
+    }
+
+    .additional_info_text{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .additional_info .additional_info_box  .small_text{
+        font-size: 16px;
+    }
+
+    .additional_info_box{
+        padding: 0;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .additional_info .additional_info_buttons .section_buttons .black_button{
+        width: 310px;
+        height: 55px;
+    }
+    .additional_info .additional_info_buttons .section_buttons .white_button{
+        width: 310px;
+        height: 55px;
+    }
+    .drone_section{
+        margin-top: 50px;
+    }
+    .section_buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    /*MAIN SECTIONS */
+    .section_plus{
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 280px;
+        gap:0px;
+    }
+    .section_plus_first, .section_plus-second{
+        width: 100%;
+        margin:0;
+        padding: 0;
+    }
+    .ah-8_section_image, .ah-10_section_image{
+        position: absolute;
+        margin-top: 100px;
+    }
+    /* LAST SECTION */
+    .last_logo_image{
+        width: 57px;
+        height: 57px;
+    }
+    .last_section{
+        gap: 0px;
+        margin-top: 30px;
+    }
+
+    .soldier_section{
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+    .last_section .last_section_logo .big_text{
+        font-weight: 600;
+    }
+
+    .last_section_glory .big_text{
+        font-size:18px;
+        padding: 0;
+    }
+    .last_section_glory .last_text{
+        font-size: 16px;
+        width: 130px;
+    }
+
+    .last_section_death .big_text{
+        font-size:18px;
+        padding: 0;
+    }
+    .last_section_death .last_text{
+        font-size: 16px;
+        width: 130px;
+    }
+    /* FOOTER SECTION */
+    .footer_section .footer_navbar{
+        display: none;
+    }
+    footer{
+        padding:0;
+    }
+
+    .footer_copyright_text{
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    /* ADDITION COMPLECTAION */
+    .add_complec_righttext{
+        display: none;
+    }
+
+    .add_complec_box{
+        padding:0;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        width: 100%;
+    }
+
+    .add_compelc_text_section .big_text{
+        padding: 0;
+    }
+    .add_compelc_text_section .add_complec_firstext {
+        width: 100%;
+    } .add_compelc_text_section .add_complec_secondtext {
+          width: 100%;
+      }
+
+
+    .add_complec_lightgray{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .add_complec_middletext{
+        text-align: right;
+    }
+
+    .add_complec_line{
+        gap: 26px;
+    }
+
+    .add_complec_line .medium_text{
+        font-size: 14px;
+    }
+
+    .add_complec{
+        gap:0px;
+        margin-top: 72px;
+    }
+
+    /*CONTACT SECTION*/
+    .contact_icon{
+        width: 55px;
+        height: 50px;
+    }
+    .contact_section{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .contact_section_box{
+        border: 1px solid var(--black-color);
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact_section_box .big_text{
+        padding: 0;
+        padding-top: 12px;
+    }
+
+    .contact_section_box .contact_text
+    {
+        font-size: 20px;
+        text-decoration: none;
+    }
+    section{
+        padding-left: 24px;
+    }
+}
+
+
+
+/*========================= CAROUSELLE FUNCTIONS =========================*/
+#hero_section_image{
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image{
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.back_button{
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--black-color); /* Цвет ползунка */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--white-color); /* Цвет фона */
+}
+
+::-webkit-scrollbar-button {
+    background-color: var(--black-color); /* Цвет стрелок */
+}
+
+::-webkit-scrollbar-track-piece {
+    border-left: 1px solid var(--black-color); /* Левая граница */
+}
